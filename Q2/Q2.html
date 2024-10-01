@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">Job Application Form</h1>
+    <form id="job_app_form">
+
+        <div class="form-row">
+            <h2 class="section-title">Personal Information</h2>
+            <h3 class="small-title">Name</h3>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <h3 class="small-title">Contact Information</h3>
+            <label for="phone">Phone Number:</label>
+            <div class="phone-container">
+                <span class="phone-prefix">+92</span>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <div class="form-row">
+                <h3 class="small-title">Address</h3>
+                <label for="street">Street:</label>
+                <input type="text" id="street" name="street" required>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+
+                <label for="zip">ZIP Code:</label>
+                <input type="number" id="zip" name="zip" required>
+            </div>
+
+        </div>
+
+        <div class="form-row">
+            <h2 class="section-title">Resume and Cover Letter</h2>
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+            <label for="coverLetter">Cover Letter:</label>
+            <textarea id="coverLetter" name="coverLetter" rows="5" required></textarea>
+        </div>
+
+        <div class="form-row">
+            <h2 class="section-title">Education</h2>
+            <label for="educationLevel">Highest Level of Education:</label>
+            <select id="educationLevel" name="educationLevel" required>
+                <option value="">Select...</option>
+                <option value="High School">High School</option>
+                <option value="Bachelor's Degree">Bachelor's Degree</option>
+                <option value="Master's Degree">Master's Degree</option>
+                <option value="PhD">PhD</option>
+            </select>
+            <label for="schoolName">School/University Name:</label>
+            <input type="text" id="schoolName" name="schoolName" required>
+            <label for="major">Major/Area of Study:</label>
+            <input type="text" id="major" name="major" required>
+            <label for="gradYear">Graduation Year:</label>
+            <input type="number" id="gradYear" name="gradYear">
+        </div>
+
+        <div class="form-row">
+            <h2 class="section-title">Employment History</h2>
+            <div id="employmentHistoryContainer">
+                <label for="jobTitle">Job Title:</label>
+                <input type="text" id="jobTitle" name="jobTitle" required>
+
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" name="companyName" required>
+
+                <label for="employmentDates">Employment Dates:</label>
+                <input type="text" id="employmentDates" name="employmentDates" required>
+
+                <label for="jobResponsibilities">Job Responsibilities:</label>
+                <textarea id="jobResponsibilities" name="jobResponsibilities" rows="3" required></textarea>
+
+                <button type="button" id="addJobBtn" class="add-btn">Add Job</button>
+            </div>
+
+            <div id="jobList">
+                <h3>Your Job Experiences</h3>
+                <ul id="jobListDisplay"></ul>
+            </div>
+        </div><br>
+
+        <div class="form-row">
+            <h2 class="section-title">Skills and Certifications</h2>
+            <label for="skills">Relevant Skills:</label>
+            <textarea id="skills" name="skills" rows="3" required></textarea>
+            <label for="certifications">Certifications:</label>
+            <input type="text" id="certifications" name="certifications">
+        </div>
+
+        <div class="form-row">
+            <h2 class="section-title">Availability</h2>
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate" required>
+            <label for="relocate">Willingness to Relocate:</label>
+            <select id="relocate" name="relocate" required>
+                <option value="">Select...</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <label for="workSchedule">Preferred Work Schedule:</label>
+            <input type="text" id="workSchedule" name="workSchedule" required>
+        </div>
+
+        <div class="form-row">
+            <h2 class="section-title">References</h2>
+            <label for="refName">Reference Name:</label>
+            <input type="text" id="refName" name="refName" required>
+            <label for="refContact">Reference Contact Number:</label>
+            <div class="phone-container">
+                <span class="phone-prefix">+92</span>
+                <input type="tel" id="refContact" name="refContact" required>
+            </div>
+            <label for="relationship">Relationship to Applicant:</label>
+            <input type="text" id="relationship" name="relationship" required>
+        </div>
+
+        <div class="form-row">
+            <h2 class="section-title">Additional Questions</h2>
+            <label for="whyCompany">Why do you want to work for this company?</label>
+            <textarea id="whyCompany" name="whyCompany" rows="3" required></textarea>
+        </div>
+
+        <div class="form-row">
+            <h2 class="section-title">Consent and Agreement</h2>
+            <div class="checkbox-group">
+                <label>
+                    I agree to the terms and conditions
+                    <input type="checkbox" id="terms" name="terms" required>
+                </label>
+                <br>
+                <label>
+                    I acknowledge the privacy policy
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                </label>
+            </div>
+        </div>
+        
+        
+        <br>
+        <div class="button-container">
+            <button type="submit" class="submit-btn">Submit Application</button>
+        </div>
+    </form>
+    <br>
+    <div class="button-container">
+        <button class="view-btn" id="viewTableBtn" style="display: none;">View Applications as Table</button>
+    </div>
+
+    <div id="tableContainer" style="display: none;">
+        <table id="applicationsTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Resume</th>
+                    <th>Cover Letter</th>
+                    <th>Street</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>ZIP Code</th>
+                    <th>Education Level</th>
+                    <th>School Name</th>
+                    <th>Major</th>
+                    <th>Graduation Year</th>
+                    <th>Job Title</th>
+                    <th>Company Name</th>
+                    <th>Employment Dates</th>
+                    <th>Job Responsibilities</th>
+                    <th>Skills</th>
+                    <th>Certifications</th>
+                    <th>Start Date</th>
+                    <th>Willingness to Relocate</th>
+                    <th>Work Schedule</th>
+                    <th>Reference Name</th>
+                    <th>Reference Contact</th>
+                    <th>Relationship to Applicant</th>
+                    <th>Why This Company</th>
+                    <th>Terms Agreement</th>
+                    <th>Privacy Acknowledgement</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
