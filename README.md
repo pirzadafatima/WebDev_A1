@@ -6,7 +6,7 @@ This repository contains solutions to two web development tasks using **HTML**, 
 
 - Designed a cross-browser, responsive web layout inspired by Ableton's website.
 - Implemented using HTML5, Bootstrap 5 and external CSS (`style.css`).
-- Used Flexbox, Grid, and Media Queries to ensure responsiveness across different screen sizes (desktop and mobile).
+- Used Media Queries to ensure responsiveness across different screen sizes (desktop and mobile).
 - Ensured compatibility with major browsers.
 
 ## Question 2: Job Application Form
